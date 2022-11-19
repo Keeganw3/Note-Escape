@@ -1,9 +1,10 @@
 class Debris {
 
   
-    constructor() {
-      this.r = 5;
+    constructor(enemyMusicNote) {
+      this.r = 10;
       this.resetDebris();
+      this.enemyMusicNote = enemyMusicNote;
     }
     
     resetDebris() {
@@ -47,6 +48,10 @@ class Debris {
     
     display() {
         ellipse(this.x, this.y, this.r * 2, this.r * 2);
+
+        imageMode(CENTER);
+        image(this.enemyMusicNote, this.x, this.y, this.r*2, this.r*2);
+  
     }
     
     hasHitShip(ship) {

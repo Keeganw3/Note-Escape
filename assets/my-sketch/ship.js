@@ -1,10 +1,11 @@
 class Ship {
 
-    constructor(x) {
+    constructor(x, spaceshipImage) {
       this.x = x;
       this.score = 0;
       this.respawn();
-      this.r = 10;
+      this.r = 15;
+      this.spaceshipImage = spaceshipImage;
     }
   
     respawn() {
@@ -28,6 +29,9 @@ class Ship {
     
     display() {
       ellipse(this.x, this.y, this.r * 2, this.r * 2);
+
+      imageMode(CENTER);
+      image(this.spaceshipImage, this.x, this.y, this.r*2, this.r*2);
     }
     
     
