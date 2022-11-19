@@ -1,25 +1,52 @@
 let leftShip;
-let rightShip;
+let rightShip; 
+let allDebris = [];
+
+
+const NUM_DEBRIS = 30;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(400, 400);
   leftShip = new Ship(width * 0.33);
   rightShip = new Ship(width * 0.66);
+  
+  // create the debris objects
+  for (let i = 0; i < NUM_DEBRIS; i++) {
+  	allDebris.push(new Debris());
+  }
 }
 
 function draw() {
   background(0);
-
+  
   leftShip.update();
   rightShip.update();
   
   leftShip.display();
   rightShip.display();
+  
+  updateDebrisAndCheckCollisions();
+  
 }
 
+
+function updateDebrisAndCheckCollisions() {
+  for (let i = 0; i < allDebris.length; i++) {
+    allDebris[i].update();
+  	allDebris[i].display();
+    
+    if (allDebris[i].hasHitShip(leftShip)) {
+    	leftShip.respawn();
+    } else if (allDebris[i].hasHitShip(rightShip)) {
+    	rightShip.respawn();
+    }
+  }
+}
+
+
 function keyPressed() {
-  if (keyCode == UP_ARROW) {
-    rightShip.isUp = true;
+	if (keyCode == UP_ARROW) {
+  	rightShip.isUp = true;
     rightShip.isDown = false;
   } else if (keyCode == DOWN_ARROW) {
   	rightShip.isDown = true;
@@ -37,11 +64,13 @@ function keyPressed() {
     leftShip.isUp = false;
   }
 }
+
+
 function keyReleased() {
-  if (keyCode == UP_ARROW) {
-    rightShip.isUp = false;
+	if (keyCode == UP_ARROW) {
+  	rightShip.isUp = false;
   } else if (keyCode == DOWN_ARROW) {
-    rightShip.isDown = false;
+  	rightShip.isDown = false;
   }
   
   if (keyCode == 87) {
