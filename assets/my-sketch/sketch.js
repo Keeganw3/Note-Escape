@@ -5,14 +5,21 @@ let allDebris = [];
 
 const NUM_DEBRIS = 30;
 
+let spaceshipImage;
 function setup() {
   createCanvas(400, 400);
-  leftShip = new Ship(width * 0.33);
-  rightShip = new Ship(width * 0.66);
+
+  // get music note image from your project_folder
+  spaceshipImage = loadImage('/assets/images/playerMusicNote.png');
+  enemyMusicNote = loadImage('/assets/images/enemyMusicNote.png');
+  
+  // pass image into the player object
+  leftShip = new Ship(width * 0.33, spaceshipImage);
+  rightShip = new Ship(width * 0.66, spaceshipImage);
   
   // create the debris objects
   for (let i = 0; i < NUM_DEBRIS; i++) {
-  	allDebris.push(new Debris());
+  	allDebris.push(new Debris(enemyMusicNote));
   }
 }
 
