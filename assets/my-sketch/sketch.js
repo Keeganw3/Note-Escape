@@ -2,8 +2,7 @@ let leftShip;
 let rightShip; 
 let allDebris = [];
 
-
-const NUM_DEBRIS = 30;
+var NUM_DEBRIS = 30;
 
 let spaceshipImage;
 function setup() {
@@ -23,7 +22,58 @@ function setup() {
   }
 }
 
+var stage = 0;
+
 function draw() {
+  if (stage==0){
+    splash();
+  }
+  if (stage==1){
+    game();
+  }
+  if (stage==2){
+    game();
+  }
+  if (stage==3){
+    game();
+  }
+  if (stage==4){
+    win();
+  }
+  if (mouseIsPressed == true){
+    stage = 1;
+  }
+}
+
+function splash() {
+  background(0);
+
+  stroke(0,255,0);
+  noFill();
+  strokeWeight(3);
+  rect(width/2, height/2);
+  noStroke();
+
+  fill(255,255,255);
+  textSize(30);
+  textFont('Alfa Slab One');
+  text('Note Escape', width/4, 50);
+
+  fill(255,255,255);
+  textSize(30);
+  textFont('Alfa Slab One');
+  text('Note Escape', width/4, 50);
+
+  textSize(15);
+  textFont('Roboto Slab');
+  text('Click to start the game!', width/3, 300);
+}
+
+function win() {
+  
+}
+
+function game() {
   background(0);
   
   leftShip.update();
