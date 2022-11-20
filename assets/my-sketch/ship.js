@@ -21,8 +21,8 @@ class Ship {
         this.down();
       }
       
-      if (this.hasPlayerScoredAPoint()) {
-        this.score ++;
+      if (this.levelPassed()) {
+        stage = stage + 1;
         this.respawn();
       }
     }
@@ -43,7 +43,7 @@ class Ship {
      this.y++;
     }
     
-    hasPlayerScoredAPoint() {
+    levelPassed() {
       if (this.y <= 0) {
         return true;
       }
