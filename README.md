@@ -4,35 +4,29 @@
 # Team **Bazinga** presents: 
 #  <img src="https://cdn-icons-png.flaticon.com/512/461/461146.png" width="50px" height="40px"> **Note Escape**  <img src="https://cdn-icons-png.flaticon.com/512/651/651717.png" width="50px" height="50px">
 ## *Deliver the right music to the other side without bumping into a wrong note*
+
+![Screenshot](#)
 <br>
 <br>
+
 ## About the Game
-======
-
- Space Race was originally made by Atari in 1973. Note Escape is our version of this very simple games. It’s a single player game. The idea is to get the avatar to the top of the map having avoided the music note debris to gain a point. There is a time limit in which at least one point needs to be gained to advance to the next, more daunting level. Game ends when you die or the time's up.
+Space Race was originally made by Atari in 1973. Note Escape is our version of this very simple games. It’s a single player game. The idea is to get the avatar to the top of the map having avoided the music note debris to gain a point. There is a time limit in which at least one point needs to be gained to advance to the next, more daunting level. Game ends when you die or the time's up.
 <br>
 <br>
-
-## Screenshot
-![image info](#)
 
 ## How to play
-======
-To start, press a key or click the mouse.
+To start, press a key or click the mouse.<br>
 Use arrow keys to move UP or DOWN.
 <br>
 <br>
 
 ## Technology used
-======
-
 Basic HTML and JS setup.
 
 ### Deployed link
 [Click here to play!](https://www.example.com)
 
 ## Credits
-======
 * Fonts used were taken from Google Fonts: https://fonts.google.com/
 * Original coding idea of Luke Garrigan [How to code Space Race! (1973) – 2](https://codeheir.com/2019/02/10/how-to-code-space-race-1973-2/)
 * [Member 1 Linkedin](https://www.linkedin.com)
