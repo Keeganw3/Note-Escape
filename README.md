@@ -23,7 +23,7 @@ Move UP or DOWN
 
 ## Credits
 ======
-* [Be sure to credit any assets that are not yours](https://www.example.com)
+* Fonts used were taken from Google Fonts: https://fonts.google.com/
 * [Member 1 Linkedin](https://www.linkedin.com)
 * [Member 2 Linkedin](https://www.linkedin.com)
 * [etc. etc.](https://www.example.com)
