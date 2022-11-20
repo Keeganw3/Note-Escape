@@ -7,9 +7,9 @@
 
 ## How to play
 ======
-Move UP or DOWN
-1. Player: keys       W(Up) and S(Down)
-2. Player: arrow keys UP and DOWN
+
+Move UP - arrow key UP
+Move DOWN - arrow key DOWN
 
 ## Setup
 ======
@@ -29,5 +29,5 @@ Move UP or DOWN
 * [etc. etc.](https://www.example.com)
 
 ### Media
-1. The image for playerMusicNote came from https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.clipartmax.com%2Fpng%2Ffull%2F55-550034_clipart-wondrous-design-white-music-notes-note-clip-white-music-note.png&imgrefurl=https%3A%2F%2Fwww.clipartmax.com%2Fmax%2Fm2i8H7N4K9b1Z5b1%2F&tbnid=jZ0Q7gEpilQXDM&vet=12ahUKEwiL97P_67r7AhVIOsAKHdFIB2kQMygyegQIARBB..i&docid=Js_ZqRimNP_SPM&w=324&h=599&q=music%20note%20png%20white&ved=2ahUKEwiL97P_67r7AhVIOsAKHdFIB2kQMygyegQIARBB
-2. The image for enemyMusicNote came from https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-music-note-icon-png-image_889465.jpg
+1. The image for playerMusicNote came from [Clipart Wondrous Design White Music Notes Note Clip - White Music Note @clipartmax.com](https://www.clipartmax.com/middle/m2i8H7N4K9b1Z5b1_clipart-wondrous-design-white-music-notes-note-clip-white-music-note/)
+2. The image for enemyMusicNote came from [Music Note Icon from pngtree.com](https://png.pngtree.com/png-vector/20190329/ourlarge/pngtree-vector-music-note-icon-png-image_889465.jpg)
