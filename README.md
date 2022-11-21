@@ -5,7 +5,7 @@
 #  <img src="https://cdn-icons-png.flaticon.com/512/461/461146.png" width="50px" height="40px"> **Note Escape**  <img src="https://cdn-icons-png.flaticon.com/512/651/651717.png" width="50px" height="50px">
 ## *Deliver the music note to the other side without bumping into a wrong note*
 
-![Title Screenshot](assets/screenshots/note-escape-title.png)
+![Title Screenshot](assets/screenshots/note-escape-game.png)
 <br>
 <br>
 
@@ -31,13 +31,20 @@ Use the arrow keys to move the music note on the right up or down.
 ### Deployed link
 [Click here to play!](https://www.example.com)
 
+## Deployment
+* Go to Github and open code in Gitpod.
+* Run command npm install -g p5-server.
+* Then run command p5 serve --open.
+* Once the window is opened you may see a white screen that says home and assets on the top left.
+* Click Assets and then my-sketch to open the game.
+* If the game is unresponsive be sure to click it once with your mouse.
+
 ## Credits
 * Fonts used were taken from Google Fonts: https://fonts.google.com/
 * Original coding idea of Luke Garrigan [How to code Space Race! (1973) – 2](https://codeheir.com/2019/02/10/how-to-code-space-race-1973-2/)
 * [Member 1 Linkedin](https://www.linkedin.com)
 * [Member 2 Linkedin](https://www.linkedin.com)
 * [Member 3 Linkedin](https://www.linkedin.com)
-* [etc. etc.](https://www.example.com)
 
 ### Media
 1. The image for playerMusicNote came from [Clipart Wondrous Design White Music Notes Note Clip - White Music Note @clipartmax.com](https://www.clipartmax.com/middle/m2i8H7N4K9b1Z5b1_clipart-wondrous-design-white-music-notes-note-clip-white-music-note/)
