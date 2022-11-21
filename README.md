@@ -23,6 +23,9 @@ Use arrow keys to move UP or DOWN.
 ## Technology used
 Basic HTML and JS setup.
 
+## Known Bugs
+* The player's and enemies music note hitboxes are slightly off because they are created by using the radius of their image. This can lead to some unfair deaths but also missing some enemies that should've hit you.
+
 ### Deployed link
 [Click here to play!](https://www.example.com)
 

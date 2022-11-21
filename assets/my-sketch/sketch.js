@@ -3,8 +3,16 @@ let rightShip;
 let allDebris = [];
 
 var NUM_DEBRIS = 30;
+var totalTime;
+var splashTime;
+var gameTime;
+var timeLimit1 = 40;
+var timeLimit2 = 30;
+var timeLimit3 = 25;
 
 let spaceshipImage;
+
+
 function setup() {
   createCanvas(400, 400);
 
@@ -28,9 +36,10 @@ function setup() {
 }
 
 
-var stage = 2;
+var stage = 0;
 
 function draw() {
+  totalTime = millis();
   if (stage==0){
     splash();
   }
@@ -52,6 +61,9 @@ function draw() {
   else if (stage==6){
     win();
   }
+  else if (stage==7){
+    lose();
+  }
 
   if (mouseIsPressed == true && stage == 0){
     stage = 1;
@@ -62,9 +74,14 @@ function draw() {
   if (mouseIsPressed == true && stage == 4){
     stage = 5;
   }
+  if (keyCode == 32 && stage == 7){
+    stage = 0;
+  }
 }
 
 function splash() {
+  splashTime = totalTime;
+  
   background(0);
 
   fill(255,255,255);
@@ -81,6 +98,8 @@ function splash() {
 }
 
 function splash2() {
+  splashTime = totalTime;
+
   background(0);
 
   stroke(0,255,0);
@@ -100,6 +119,8 @@ function splash2() {
 }
 
 function splash3() {
+  splashTime = totalTime;
+
   background(0);
 
   stroke(0,255,0);
@@ -139,6 +160,27 @@ function win() {
 
 }
 
+function lose() {
+  background(0);
+
+  stroke(0,255,0);
+  noFill();
+  strokeWeight(3);
+  rect(width/2, height/2);
+  noStroke();
+
+  fill(255,255,255);
+  textSize(30);
+  textFont('Alfa Slab One');
+  text('GAME OVER!!!', width/4.6, 50);
+  
+  textSize(15);
+  textFont('Roboto Slab');
+  text('You Ran Out Of Time.', width/3.5, 150);
+  text('Hit Spacebar To Return To The Title Screen.', width/8, 250);
+
+}
+
 function round1() {
   background(0);
 
@@ -148,7 +190,20 @@ function round1() {
   leftShip.display();
   rightShip.display();
   
+  splashTime = splashTime;
+  gameTime = int((totalTime-splashTime)/1000);
+
+  fill(255,255,255);
+  textSize(15);
+  textFont('Alfa Slab One');
+  text('TIME :', 5, 395);
+  text(timeLimit1-gameTime, 65, 395);
+
   updateDebrisAndCheckCollisions();
+
+  if (gameTime >= timeLimit1) {
+    stage = 7;
+  }
 }
 
 function round2() {
@@ -160,7 +215,20 @@ function round2() {
   leftShip.display();
   rightShip.display();
   
+  splashTime = splashTime;
+  gameTime = int((totalTime-splashTime)/1000);
+
+  fill(255,255,255);
+  textSize(15);
+  textFont('Alfa Slab One');
+  text('TIME :', 5, 395);
+  text(timeLimit2-gameTime, 65, 395);
+
   updateDebrisAndCheckCollisions();
+
+  if (gameTime >= timeLimit2) {
+    stage = 7;
+  }
 }
 
 function round3() {
@@ -171,8 +239,21 @@ function round3() {
   
   leftShip.display();
   rightShip.display();
-  
+
+  splashTime = splashTime;
+  gameTime = int((totalTime-splashTime)/1000);
+
+  fill(255,255,255);
+  textSize(15);
+  textFont('Alfa Slab One');
+  text('TIME :', 5, 395);
+  text(timeLimit3-gameTime, 65, 395);
+
   updateDebrisAndCheckCollisions();
+
+  if (gameTime >= timeLimit3) {
+    stage = 7;
+  }
 }
 
 
