@@ -77,6 +77,8 @@ function draw() {
   if (keyCode == 32 && stage == 7){
     stage = 0;
   }
+  if (keyCode == 13)
+  stage = 6;
 }
 
 function splash() {

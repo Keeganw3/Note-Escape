@@ -29,7 +29,7 @@ Use the arrow keys to move the music note on the right up or down.
 * The player's and enemies music note hitboxes are slightly off because they are created by using the radius of their image. This can lead to some unfair deaths but also missing some enemies that should've hit you.
 
 ### Deployed link
-[Click here to play!](https://www.example.com)
+[Click here to play!](https://keeganw3.github.io/Note-Escape/)
 
 ## Deployment
 * Go to Github and open code in Gitpod.
