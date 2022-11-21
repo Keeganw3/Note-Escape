@@ -15,37 +15,72 @@ function setup() {
   // pass image into the player object
   leftShip = new Ship(width * 0.33, spaceshipImage);
   rightShip = new Ship(width * 0.66, spaceshipImage);
-  
+
+  createDebris();
+}
+
   // create the debris objects
+  function createDebris() {
+
   for (let i = 0; i < NUM_DEBRIS; i++) {
   	allDebris.push(new Debris(enemyMusicNote));
   }
 }
 
-var stage = 0;
+
+var stage = 2;
 
 function draw() {
   if (stage==0){
     splash();
   }
-  if (stage==1){
-    game();
+  else if (stage==1){
+    round1();
   }
-  if (stage==2){
-    game();
+  else if (stage==2){
+    splash2();
   }
-  if (stage==3){
-    game();
+  else if (stage==3){
+    round2();
   }
-  if (stage==4){
+  else if (stage==4){
+    splash3();
+  }
+  else if (stage==5){
+    round3();
+  }
+  else if (stage==6){
     win();
   }
+
   if (mouseIsPressed == true && stage == 0){
     stage = 1;
+  }
+  if (mouseIsPressed == true && stage == 2){
+    stage = 3;
+  }
+  if (mouseIsPressed == true && stage == 4){
+    stage = 5;
   }
 }
 
 function splash() {
+  background(0);
+
+  fill(255,255,255);
+  textSize(30);
+  textFont('Alfa Slab One');
+  text('Note Escape', width/4, 50);
+
+  textSize(15);
+  textFont('Roboto Slab');
+  text('Use The Up And Down Arrow Keys To Move.', width/8, 150);
+  text('Avoid The Music Notes While Trying To', width/7, 200);
+  text('Reach The Top Of The Screen.', width/4.35, 250);
+  text('Click to start stage 1!', width/3.5, 320);
+}
+
+function splash2() {
   background(0);
 
   stroke(0,255,0);
@@ -57,11 +92,30 @@ function splash() {
   fill(255,255,255);
   textSize(30);
   textFont('Alfa Slab One');
-  text('Note Escape', width/4, 50);
+  text('Stage 2', width/3, 50);
 
   textSize(15);
   textFont('Roboto Slab');
-  text('Click to start the game!', width/3, 300);
+  text('Click To Start The Next Stage!', width/4.3, 200);
+}
+
+function splash3() {
+  background(0);
+
+  stroke(0,255,0);
+  noFill();
+  strokeWeight(3);
+  rect(width/2, height/2);
+  noStroke();
+
+  fill(255,255,255);
+  textSize(30);
+  textFont('Alfa Slab One');
+  text('Stage 3', width/3, 50);
+
+  textSize(15);
+  textFont('Roboto Slab');
+  text('Click to start the final stage!', width/4.1, 200);
 }
 
 function win() {
@@ -76,14 +130,28 @@ function win() {
   fill(255,255,255);
   textSize(30);
   textFont('Alfa Slab One');
-  text('YOU WIN!!!', width/4, 50);
+  text('YOU WIN!!!', width/3.7, 50);
   
   textSize(15);
   textFont('Roboto Slab');
-  text('Click to start the game!', width/3, 300);  
+  text('Congratulations on finishing your journey!', width/7, 150);  
+  text('Refresh the page to play again!', width/4.5, 250);
+
 }
 
-function game() {
+function round1() {
+  background(0);
+
+  leftShip.update();
+  rightShip.update();
+  
+  leftShip.display();
+  rightShip.display();
+  
+  updateDebrisAndCheckCollisions();
+}
+
+function round2() {
   background(0);
   
   leftShip.update();
@@ -93,7 +161,18 @@ function game() {
   rightShip.display();
   
   updateDebrisAndCheckCollisions();
+}
+
+function round3() {
+  background(0);
   
+  leftShip.update();
+  rightShip.update();
+  
+  leftShip.display();
+  rightShip.display();
+  
+  updateDebrisAndCheckCollisions();
 }
 
 
