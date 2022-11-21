@@ -87,14 +87,19 @@ function splash() {
   fill(255,255,255);
   textSize(30);
   textFont('Alfa Slab One');
-  text('Note Escape', width/4, 50);
+  text('Note Escape', width/4, 70);
 
   textSize(15);
   textFont('Roboto Slab');
-  text('Use The Up And Down Arrow Keys To Move.', width/8, 150);
-  text('Avoid The Music Notes While Trying To', width/7, 200);
-  text('Reach The Top Of The Screen.', width/4.35, 250);
-  text('Click to start stage 1!', width/3.5, 320);
+  text('Avoid The Other Music Notes While Trying', width/7, 120);
+  text('To Reach The Top Of The Screen.', width/4.35, 170);
+  textSize(15);
+  text('Use W And S To Move The Left Note.', 75, 220);
+  text('Use Up And Down To Move The Right Note.', 55, 270);
+  
+  textSize(15);
+  text('Click to start stage 1!', width/3.2, 340);
+
 }
 
 function splash2() {
