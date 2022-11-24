@@ -28,9 +28,6 @@ Use the arrow keys to move the music note on the right up or down.
 ## Known Bugs
 * The player's and enemies music note hitboxes are slightly off because they are created by using the radius of their image. This can lead to some unfair deaths but also missing some enemies that should've hit you.
 
-### Deployed link
-[Click here to play!](https://keeganw3.github.io/Note-Escape/)
-
 ## Deployment
 * Go to Github and open code in Gitpod.
 * Run command npm install -g p5-server.
@@ -41,10 +38,8 @@ Use the arrow keys to move the music note on the right up or down.
 
 ## Credits
 * Fonts used were taken from Google Fonts: https://fonts.google.com/
-* Original coding idea of Luke Garrigan [How to code Space Race! (1973) – 2](https://codeheir.com/2019/02/10/how-to-code-space-race-1973-2/)
-* [Member 1 Linkedin](https://www.linkedin.com)
-* [Member 2 Linkedin](https://www.linkedin.com)
-* [Member 3 Linkedin](https://www.linkedin.com)
+* Original coding idea from Luke Garrigan [How to code Space Race! (1973) – 2](https://codeheir.com/2019/02/10/how-to-code-space-race-1973-2/)
+* [Member 1/Scrum Master Linkedin](https://www.linkedin.com/in/keeganwaters/)
 
 ### Media
 1. The image for playerMusicNote came from [Clipart Wondrous Design White Music Notes Note Clip - White Music Note @clipartmax.com](https://www.clipartmax.com/middle/m2i8H7N4K9b1Z5b1_clipart-wondrous-design-white-music-notes-note-clip-white-music-note/)
